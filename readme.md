@@ -29,9 +29,11 @@ In this example we are using Node name and Node id combination to set the signal
 
 Observe the process design
    * Human task on entry script
-     String id = ((WorkItemNodeInstance)kcontext.getNodeInstance()).getNodeName() + "-" + ((WorkItemNodeInstance)kcontext.getNodeInstance()).getId();
-     System.out.println(" SignalName [" + id + "]");
-     kcontext.setVariable("signalName", id);
+   
+      String id = ((WorkItemNodeInstance)kcontext.getNodeInstance()).getNodeName() + "-" + ((WorkItemNodeInstance)kcontext.getNodeInstance()).getId();
+      System.out.println(" SignalName [" + id + "]");
+      kcontext.setVariable("signalName", id);
+      
    ![project modules1](images/dynamic_ht.png)
    
    * Signal Name assignment
@@ -42,6 +44,7 @@ Post deploying the kJar follow the the below steps.
   * Step 1: Create a process instance for [checkSignalName](src/main/resources/com/temenos/human_signal/checkSignalName.bpmn)
   * Step 2: Observe the signal name in console.
    ![project modules1](images/dynamic_console.png)
+   ![project modules1](images/dynamic_pv.png)
   * Step 2: Claim and work on human task. 
   * Step 3: Start button will make the human task status to 'inprogress'
   * Step 4: Signal the with dynamic name. 
