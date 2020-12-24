@@ -34,6 +34,8 @@ Observe the process design
       System.out.println(" SignalName [" + id + "]");
       kcontext.setVariable("signalName", id);
       
+   Refer the [WorkItemNodeInstance API](https://docs.jboss.org/jbpm/v5.4/javadocs/org/jbpm/workflow/instance/node/WorkItemNodeInstance.html) to prepare various combinations of signal names. Make sure signal name is unique across the process.
+   
    ![project modules1](images/dynamic_ht.png)
    
    * Signal Name assignment
